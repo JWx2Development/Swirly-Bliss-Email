@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            background-color: #DDCBCB;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        #wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #fff;
+            max-width: 600px;
+            height: 260px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            display: flex;
+            width: 120px;
+            height: 120px;
+            padding: 20px;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #tagline {
+            text-align: center;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        #tagline :nth-child(1) {
+            color: #fff;
+            font-size: 32px;
+            line-height: 1px;
+
+        }
+
+        #tagline :nth-child(2) {
+            color: #FF9999;
+            font-size: 36px;
+            line-height: 0px;
+            margin-top: 0;
+
+        }
+
+        @media screen and (max-width: 280px) {
+            #header {
+                height: 300px;
+            }
+
+            #tagline :nth-child(2) {
+                color: #FF9999;
+                font-size: 36px;
+                line-height: 30px;
+
+            }
+        }
+
+
+        /*first row */
+        #rowOne {
+            background-color: #EDEDD9;
+            max-width: 600px;
+            height: 335px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .first-red-swirl {
+            width: 114px;
+            height: 112px;
+            max-width: 100%;
+            max-height: 100%;
+            position: absolute;
+            right: 2px;
+            top: 11px;
+            transform: rotate(10deg);
+        }
+
+        .second-red-swirl {
+            width: 189px;
+            height: 186px;
+            position: absolute;
+            left: 53px;
+            top: 94px;
+        }
+
+        .strawberry-swirl-pot {
+            width: 120px;
+            height: 155px;
+            position: absolute;
+            left: 75px;
+            top: 110px;
+            transform: rotate(30deg);
+        }
+
+        .third-red-swirl {
+            width: 88px;
+            height: 77px;
+            position: absolute;
+            left: 250px;
+            bottom: 4px;
+            mix-blend-mode: normal;
+        }
+
+        .text {
+            position: absolute;
+            left: 311px;
+            top: 115px;
+            font-family: 'Luckiest Guy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+        }
+
+        .text :nth-child(1) {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .text :nth-child(2) {
+            color: #ED0D0E;
+            font-size: 36px;
+            margin: 0;
+
+        }
+
+        .text :nth-child(3) {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        #buyNowBtn {
+            width: 202px;
+            height: 42px;
+            border-radius: 5px;
+            position: absolute;
+            right: 88px;
+            bottom: 65px;
+            background-color: #10CD00;
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 24px;
+
+        }
+
+        @media screen and (max-width:599px) {
+
+            .first-red-swirl {
+                display: none;
+            }
+
+            .third-red-swirl {
+                display: none;
+            }
+
+            .text {
+                margin: 40px auto 0;
+                position: static;
+            }
+
+            .text :nth-child(1) {
+                text-align: center;
+            }
+
+            .text :nth-child(2) {
+                text-align: center;
+            }
+
+            .text :nth-child(3) {
+                text-align: center;
+            }
+
+            .second-red-swirl {
+                width: 150px;
+                height: 150px;
+                position: static;
+                display: flex;
+                margin: 0px auto;
+            }
+
+            .hero-img {
+                position: relative;
+                width: 100%;
+            }
+
+            .strawberry-swirl-pot {
+                width: 100px;
+                height: 141px;
+                position: static;
+                display: flex;
+                margin: -148px auto;
+                transform: rotate(30deg);
+            }
+
+            #buyNowBtn {
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+
+        }
+
+
+
+
+        /*Second row */
+
+        #rowTwo {
+            background-color: #FF9999;
+            max-width: 600px;
+            height: 335px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brown-swirl {
+            width: 308px;
+            height: 363px;
+            position: absolute;
+            left: 0;
+        }
+
+        .yellow-swirl {
+            width: 372px;
+            height: 370px;
+            position: absolute;
+            left: 270px;
+        }
+
+        #infoText {
+            width: 100%;
+            height: 363px;
+            position: absolute;
+            left: 0;
+            text-align: center;
+        }
+
+        .info-text-first-line {
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 36px;
+        }
+
+        .info-text-second-line {
+            color: #E9ED0D;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 24px;
+        }
+
+        .swirly-text {
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 32px;
+        }
+
+        /* Colouring Bliss logo*/
+        .bliss-text {
+            display: inline-flex;
+        }
+
+        .b {
+            color: #ED0D0E;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 32px;
+        }
+
+        .l {
+            color: #E9ED0D;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 32px;
+        }
+
+        .i {
+            color: #10CD00;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 32px;
+        }
+
+        .s1 {
+            color: #654008;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 32px;
+        }
+
+        .s2 {
+            color: #FFA800;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 32px;
+        }
+
+        .row-two-description {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+            width: 70%;
+            margin: auto 15%;
+            text-align: center;
+        }
+
+        #learnMoreBtn {
+            width: 202px;
+            height: 42px;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #10CD00;
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 24px;
+
+        }
+
+        @media screen and (max-width:599px) {
+            .yellow-swirl {
+                display: none;
+            }
+
+            .brown-swirl {
+                width: 100%;
+            }
+        }
+
+
+
+
+
+        /*Third row */
+        #rowThree {
+            background-color: #CEF6FF;
+            max-width: 600px;
+            height: 335px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .row-three-heading {
+            text-align: center;
+            padding-top: 33px;
+            color: #FF9999;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 36px;
+        }
+
+        .banana-swirl-pot {
+            width: 140px;
+            height: 180px;
+            position: absolute;
+            left: 130px;
+            top: 110px;
+
+        }
+
+        .banana-swirl {
+            width: 189px;
+            height: 186px;
+            position: absolute;
+            left: 105px;
+            top: 108px;
+        }
+
+        .chocolate-swirl-pot {
+            width: 140px;
+            height: 180px;
+            position: absolute;
+            right: 120px;
+            top: 120px;
+
+        }
+
+        .chocolate-swirl {
+            width: 142px;
+            height: 164px;
+            position: absolute;
+            right: 127px;
+            bottom: 50px;
+        }
+
+        #seeMoreBtn {
+            width: 202px;
+            height: 42px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin: 10px 33%;
+            background-color: #10CD00;
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-family: 'Luckiest Guy';
+            font-size: 24px;
+
+        }
+
+        .row-three-description {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+            width: 70%;
+            margin: auto 15%;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+        }
+
+
+        @media screen and (max-width:599px) {
+            #rowThree {
+                position: relative;
+                height: max-content;
+            }
+
+            #seeMoreBtn {
+                justify-content: center;
+                display: flex;
+                margin: 20px auto;
+                align-items: center;
+            }
+
+            .banana-swirl {
+                display: none;
+
+            }
+
+            .banana-swirl-pot {
+                width: 100px;
+                height: 140px;
+                position: static;
+                left: 130px;
+                display: flex;
+                margin: auto;
+            }
+
+            .chocolate-swirl-pot {
+                display: none;
+            }
+
+            .chocolate-swirl {
+                display: none;
+            }
+
+            .row-three-description {
+                margin-top: 10px;
+                bottom: 10px;
+                position: static;
+            }
+
+
+
+        }
+
+
+
+
+
+        /*Footer */
+        #footer {
+            background-color: #E9ED0D;
+            max-width: 600px;
+            height: 220px;
+            margin-bottom: 20px;
+        }
+
+        .footer-heading {
+            font-size: 36px;
+            text-align: center;
+            padding-top: 44px;
+            padding-bottom: 27px;
+        }
+
+        #socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        #socialIcons>a>img {
+            width: 48px;
+            height: 48px;
+            padding: 5px;
+
+        }
+
+        .unsubscribe-text {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div>
+                <img id="logo" src="/images/logo.png" alt="logo of swirly bliss ice cream company">
+            </div>
+            <div id="tagline">
+                <p>GO ON,</p>
+                <p>TREAT YOURSELF</p>
+            </div>
+        </div>
+        <div id="rowOne">
+            <img class="first-red-swirl" src="/images/red swirl.png" alt="">
+            <h1 class="text">
+                <p>TRY OUR NEW</p>
+                <p>STRAWBERRY</p>
+                <p>SWIRL</p>
+
+            </h1>
+            <div class="hero-img">
+                <img class="second-red-swirl" src="/images/red swirl.png" alt="">
+                <img class="strawberry-swirl-pot" src="/images/strawberry_icecream_pot.png"
+                    alt="a ice cream pot showing the new strawberry swirl ice cream">
+            </div>
+            <img class="third-red-swirl" src="/images/red swirl.png" alt="">
+            <button role="button" id="buyNowBtn" href="#">BUY NOW</button>
+
+
+        </div>
+        <div id="rowTwo">
+            <img class="brown-swirl" src="/images/brown-swirl.png" alt="">
+            <img class="yellow-swirl" src="/images/yellow-swirl.png" alt="">
+            <div id="infoText">
+                <h2 class="info-text-first-line">TELL ME MORE</h2>
+                <p class="info-text-second-line">LEARN MORE ABOUT
+                <div class="swirly-text">SWIRLY</div>
+                <div class="bliss-text">
+                    <div class="b">B</div>
+                    <div class="l">L</div>
+                    <div class="i">I</div>
+                    <div class="s1">S</div>
+                    <div class="s2">S</div>
+                </div>
+                </p>
+                <p class="row-two-description">How do we make our swirlious Ice cream.</p>
+                <button role="button" id="learnMoreBtn" href="#">LEARN MORE</button>
+            </div>
+
+        </div>
+        <div id="rowThree">
+            <div role="heading" class="row-three-heading">WANT ANOTHER SPOON?</div>
+            <img class="banana-swirl-pot" src="/images/swirly-bliss-banana Small 2.png"
+                alt="a ice cream pot showing the banana swirl ice cream">
+            <img class="banana-swirl" src="/images/banana-swirl.png" alt="">
+            <img class="chocolate-swirl-pot" src="/images/swirly-bliss-chocolate Small 2.png"
+                alt="a ice cream pot showing the chocolate swirl ice cream">
+            <img class="chocolate-swirl" src="/images/chocolate-swirl.png" alt="">
+            <button id="seeMoreBtn" href="#">SEE MORE</button>
+            <p class="row-three-description">Loads more flavours available.</p>
+        </div>
+        <div id="footer">
+
+            <div role="heading" class="footer-heading">FOLLOW US</div>
+            <div id="socialIcons">
+                <a href="#"><img src="/images/facebook-icon.png" alt="facebook logo"></a>
+                <a href="#"><img src="/images/instagram-icon.png" alt="instagram logo"></a>
+                <a href="#"><img src="/images/twitter-icon.png" alt="twitter logo"></a>
+                <a href="#"><img src="/images/ticktock-icon.png" alt="ticktock logo"></a>
+            </div>
+            <p class="unsubscribe-text">TO UNSUBSCRIBE <a href="#"><u>CLICK HERE</u></a></p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
